@@ -55,9 +55,12 @@ export default function App() {
                 </Text>
                 
             </TouchableOpacity>
+            <TouchableOpacity>
             <Text style={{ fontSize: 15, color: '#fff' }}>
                     Ainda não tem cadastro ?
                 </Text>
+            </TouchableOpacity>
+            
         </ImageBackground>
     );
 }
