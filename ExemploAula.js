@@ -116,3 +116,129 @@ const styles = StyleSheet.create({
     paddingRight: 10
   }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import {
+//   StyleSheet,
+//   Image,
+//   Text,
+//   View,
+//   StatusBar,
+//   TouchableOpacity,
+//   TextInput,
+// } from "react-native";
+// import { useState } from "react";
+
+// export default function App() {
+//   const [texto, setTexto] = useState("");
+//   const [senha, setSenha] = useState("");
+//   const [textArea, setTextArea] = useState("");
+
+//   const [textoVisto, setTextoVisto] = useState("");
+
+//   return (
+//       <View style={styles.container}>
+//           <StatusBar style="auto" />
+
+
+//           <TextInput
+//               style={styles.input}
+//               onChangeText={(text) => setTexto(text)}
+//               placeholder="Digite seu nome"
+//               placeholderTextColor={'#fff'}
+//               backgroundColor="blue"
+//               autoCapitalize="words"
+//           />
+//           <TextInput
+//             secureTextEntry={true}
+//               style={styles.input}
+//               onChangeText={(senha) => setSenha(senha)}
+//               placeholder="Digite sua senha"
+              
+//               placeholderTextColor={'#fff'}
+              
+//               backgroundColor="blue"
+//           />
+//            <TextInput
+
+//             secureTextEntry={true}
+//               style={[styles.input,{height:100}]}
+//               onChangeText={(textArea) => setTextArea(textArea)}
+              
+//               placeholderTextColor={'#fff'}
+              
+//               backgroundColor="blue"
+//               multiline
+//           />
+
+
+//           <TouchableOpacity
+//               onPress={() => {
+//                   setTextoVisto(texto);
+//               }}
+//               style={styles.button}
+//           >
+//               <Image
+//                   style={styles.img}
+//                   source={{
+//                       uri: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/2048px-Facebook_f_logo_%282019%29.svg.png",
+//                   }}
+//               />
+//               <Text style={{color:'#fff',fontSize:30,}}>Facebook</Text>
+//           </TouchableOpacity>
+//           <Text>{"Bem Vindo " + textoVisto}</Text>
+//       </View>
+//   );
+// }
+
+// const styles = StyleSheet.create({
+//   container: {
+//       flex: 1,
+//       backgroundColor: "#fff",
+//       alignItems: "center",
+//       justifyContent: "center",
+//   },
+//   button: {
+//     flexDirection:"row",
+//       justifyContent: "flex-start",
+//       alignItems: "center",
+//       width: 300,
+//       height: 70,
+//       borderColor: "black",
+//       borderWidth: 2,
+//       backgroundColor: "blue",
+//       borderRadius: 15
+//   },
+//   img: {
+//     marginLeft:5,
+//     marginRight:20,
+//       width: 50,
+//       height: 50,
+//   },
+//   input: {
+//       paddingLeft:5,
+//       borderWidth: 2,
+//       borderColor: "black",
+//       width: 200,
+//       height: 40,
+//       borderRadius: 15,
+//   },
+// });
