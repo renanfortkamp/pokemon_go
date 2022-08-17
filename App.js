@@ -20,13 +20,13 @@ export default function App() {
                 />
                 <Stack.Screen
                     options={{
-                      title: "Home",
-                      headerStyle: {
-                          backgroundColor: "#0D4DA3",
-                      },
-                      headerTintColor: "#fff",
-                      headerTitleAlign:'center'
-                  }}
+                        title: "Home",
+                        headerStyle: {
+                            backgroundColor: "#0D4DA3",
+                        },
+                        headerTintColor: "#fff",
+                        headerTitleAlign: "center",
+                    }}
                     name="Home"
                     component={Home}
                 />
@@ -37,12 +37,23 @@ export default function App() {
                             backgroundColor: "#0D4DA3",
                         },
                         headerTintColor: "#fff",
-                        headerTitleAlign:'center'
+                        headerTitleAlign: "center",
                     }}
                     name="NewPlayer"
                     component={NewPlayer}
                 />
-                <Stack.Screen name="ChousePokemon" component={ChoisePokemon} />
+                <Stack.Screen
+                    options={{
+                        title: "Escolha Seu Pokemon",
+                        headerStyle: {
+                            backgroundColor: "#0D4DA3",
+                        },
+                        headerTintColor: "#fff",
+                        headerTitleAlign: "center",
+                    }}
+                    name="ChousePokemon"
+                    component={ChoisePokemon}
+                />
                 <Stack.Screen name="Terms" component={Terms} />
             </Stack.Navigator>
         </NavigationContainer>

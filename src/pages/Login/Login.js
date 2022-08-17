@@ -11,40 +11,30 @@ import {
 
 import { useState } from "react";
 import background from "../../../assets/bg.jpg";
-import NewPlayer from "../NewPlayer/NewPlayer";
 import { players } from "../NewPlayer/NewPlayer";
 
 export default function Login({ navigation }) {
-    const players1 = [
-        { email: "renan", senha: "renan" },
-        { email: "renan1", senha: "renan1" },
-        { email: "renan2", senha: "renan2" },
-        { email: "renan3", senha: "renan3" },
-        { email: "renan4", senha: "renan4" },
-        { email: "renan5", senha: "renan5" },
-        { email: "renan6", senha: "renan6" },
-        { email: "renan7", senha: "renan7" },
-        { email: "renan8", senha: "renan8" },
-        { email: "renan9", senha: "renan9" },
-    ];
+    
     const [emailLogin, setEmailLogin] = useState("");
     const [senhaLogin, setSenhaLogin] = useState("");
 
     const [textoVisto, setTextoVisto] = useState("");
+
     function userLogin() {
-        if(players.length > 0){
-            for (let i = 0; i < players1.length; i++) {
-                if (
-                    players[i].email == emailLogin &&
-                    players[i].senha == senhaLogin
-                ){
-                    alert("Usuario Encontrado");
-                    return;
+
+        let user = false
+            if( user == false){
+                players.forEach(item =>{
+                    if(item.email == emailLogin && item.senha == senhaLogin){
+                        user = true
+                    }
                 }
+                )
             }
-            
-        }else{alert("Usuario não cadastrado")}
-        alert("não encontrado")
+        if(user == true){
+            navigation.navigate('Home')
+        }else{alert("Usuario ou senha incorreto")}
+        
     }
 
     function navigationNewPlayer() {

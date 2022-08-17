@@ -5,11 +5,12 @@ import {
     TextInput,
     ImageBackground,
     TouchableOpacity,
+    ScrollView,
 } from "react-native";
 import React from "react";
 import { useState } from "react";
 
-export const players = [];
+export const players = new Array()
 
 export default function NewPlayer({ navigation }) {
     const [nick, setNick] = useState("");
@@ -35,7 +36,7 @@ export default function NewPlayer({ navigation }) {
     }
 
     return (
-        <View style={style.container}>
+        <ScrollView>
             <TextInput
                 style={style.input}
                 onChangeText={(nick) => setNick(nick)}
@@ -97,7 +98,7 @@ export default function NewPlayer({ navigation }) {
             <Text>{telefone}</Text>
             <Text>{email}</Text>
             <Text>{senha}</Text>
-        </View>
+        </ScrollView>
     );
 }
 
@@ -122,8 +123,9 @@ const style = StyleSheet.create({
         borderColor: "#fff",
         borderWidth: 2,
         backgroundColor: "#0D4DA3",
-        marginBottom: 10,
+        marginTop: 10,
         borderRadius: 10,
+        alignSelf: "center",
     },
     img: {
         marginLeft: 5,
@@ -140,6 +142,7 @@ const style = StyleSheet.create({
         borderRadius: 5,
         textAlign: "center",
         color: "#0D4DA3",
-        marginBottom: 10,
+        marginTop: 10,
+        alignSelf: "center",
     },
 });
