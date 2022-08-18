@@ -28,8 +28,7 @@ export default function NewPlayer({ navigation }) {
                 email: email,
                 senha: senha,
             });
-
-            navigation.navigate("Login");
+            navigation.navigate("ChoisePokemon");
         } else {
             alert("Preencha todos os dados!");
         }
@@ -93,11 +92,6 @@ export default function NewPlayer({ navigation }) {
             <TouchableOpacity style={style.button} onPress={cadastrarPlayer}>
                 <Text style={{ fontSize: 25, color: "#fff" }}>Cadastrar</Text>
             </TouchableOpacity>
-            <Text>{nick}</Text>
-            <Text>{idade}</Text>
-            <Text>{telefone}</Text>
-            <Text>{email}</Text>
-            <Text>{senha}</Text>
         </ScrollView>
     );
 }
