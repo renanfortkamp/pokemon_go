@@ -5,8 +5,8 @@ import background from "../../../assets/bg.jpg"
 
 export default function Home({navigation}) {
 
-  function navigationLogin(){
-    navigation.navigate('Login')
+  function navigationChoisePokemon(){
+    navigation.navigate('ChoisePokemon')
 }
   return (
     <ImageBackground
@@ -17,8 +17,8 @@ export default function Home({navigation}) {
             <TouchableOpacity
             style={style.button}
             >
-                <Text onPress={navigationLogin} style={{ fontSize: 20, color: '#fff' }}>
-                    Login
+                <Text onPress={navigationChoisePokemon} style={{ fontSize: 20, color: '#fff' }}>
+                    Choise Pokemon
                 </Text>
                 
             </TouchableOpacity>

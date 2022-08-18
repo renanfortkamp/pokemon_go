@@ -11,6 +11,7 @@ import {
 
 import { useState } from "react";
 import background from "../../../assets/bg.jpg";
+import NewPlayer from "../NewPlayer/NewPlayer";
 import { players } from "../NewPlayer/NewPlayer";
 
 export default function Login({ navigation }) {

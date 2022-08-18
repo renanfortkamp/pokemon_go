@@ -51,7 +51,7 @@ export default function App() {
                         headerTintColor: "#fff",
                         headerTitleAlign: "center",
                     }}
-                    name="ChousePokemon"
+                    name="ChoisePokemon"
                     component={ChoisePokemon}
                 />
                 <Stack.Screen name="Terms" component={Terms} />

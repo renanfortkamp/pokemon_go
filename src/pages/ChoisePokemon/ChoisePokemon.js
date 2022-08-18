@@ -3,10 +3,26 @@ import React from 'react'
 
 export default function ChoisePokemon() {
   return (
-    <View>
-      <Text>ChoisePokemon</Text>
+    <View style={styles.conteiner}>
+      <Text style={styles.title}>Qual seu Pokemon inicial ?</Text>
+      <View>
+
+      </View>
     </View>
   )
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  conteiner:{
+    backgroundColor:'#0d4da3',
+    flex:1,
+  },
+  title:{
+    marginTop:10,
+    color:"#fff",
+    fontSize:24,
+    fontWeight:'bold',
+    alignSelf:'center'
+    
+  }
+})
