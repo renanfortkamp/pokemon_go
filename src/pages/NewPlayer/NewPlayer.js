@@ -27,6 +27,7 @@ export default function NewPlayer({ navigation }) {
                 telefone: telefone,
                 email: email,
                 senha: senha,
+                pokemons:[]
             });
             navigation.navigate("ChoisePokemon");
         } else {

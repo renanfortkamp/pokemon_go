@@ -5,13 +5,52 @@ import {
     Image,
     ScrollView,
     Dimensions,
+    TouchableOpacity,
+    Alert
 } from "react-native";
 import React from "react";
+import { players } from "../NewPlayer/NewPlayer";
 
-export default function ChoisePokemon() {
+export default function ChoisePokemon({ navigation }) {
+
+  function pokemonEscolhido(pokemonName,pokemonUrl){
+    
+    // pokemons.forEach(item =>{
+
+
+    // })
+    // players[0].pokemons.push({
+    //   name: pokemonName,
+    //   url: pokemonUrl
+
+    // })
+
+    navigation.navigate("Terms")
+
+
+  }
+
+  function clickPokemon(pokemonName,pokemonUrl){
+    Alert.alert(
+      'Aviso',
+      `Você deseja escolher o Pokemon ${pokemonName} ?`,
+      [
+        {
+          text:'Sim!',
+          onPress: ()=> pokemonEscolhido(pokemonName,pokemonUrl)
+        },
+        {
+          text:'Não!'
+        }
+      ]
+      )
+
+      
+  }
+
   const pokemons = [
     {
-      name: 'Pokemon 1',
+      name: 'Bulbasauro',
       url: 'https://i.pinimg.com/564x/57/dd/c8/57ddc8a96e71075ad261ae71ce89f1d9.jpg'
     },
     {
@@ -38,7 +77,9 @@ export default function ChoisePokemon() {
       <ScrollView horizontal>
 
         {pokemons.map((pokemon) => (
-          <View style={styles.cardPokemon} key={pokemon.name}>
+
+          <TouchableOpacity key={pokemon.name} onPress={()=>{clickPokemon(pokemon.name,pokemon.url)}} activeOpacity={0.7}>
+            <View style={styles.cardPokemon} >
             <Text style={styles.pokemonName}>{pokemon.name}</Text>
             <Image
               source={{ uri: pokemon.url }}
@@ -46,6 +87,8 @@ export default function ChoisePokemon() {
               resizeMode="contain"
             />
           </View>
+          </TouchableOpacity>
+          
         ))}
 
       </ScrollView>

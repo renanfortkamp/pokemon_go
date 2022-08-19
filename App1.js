@@ -1,8 +1,7 @@
 // import 'react-native-gesture-handler';
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { NavigationContainer } from "@react-navigation/native";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
 import Login from "./src/pages/Login/Login.js";
 import Home from "./src/pages/Home/Home.js";
 import NewPlayer from "./src/pages/NewPlayer/NewPlayer";
@@ -13,29 +12,16 @@ const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
 export default function App() {
-    function HomeNavigator() {
-        return (
-            <NavigationContainer>
-                <Tab.Navigator initialRouteName="Home">
-                    <Tab.Screen
-                        // options={{ headerShown: false }}
-                        name="Home"
-                        component={Home}
-                    />
-                </Tab.Navigator>
-            </NavigationContainer>
-        );
-    }
-
     return (
         <NavigationContainer>
-            <Stack.Navigator initialRouteName="Login">
-                <Stack.Screen
+            <Tab.Navigator initialRouteName="Login">
+                <Tab.Screen
                     options={{ headerShown: false }}
                     name="Login"
-                    component={HomeNavigator}
+                    component={Login}
+
                 />
-                {/* <Stack.Screen
+                <Tab.Screen
                     options={{
                         title: "Home",
                         headerStyle: {
@@ -46,8 +32,8 @@ export default function App() {
                     }}
                     name="Home"
                     component={Home}
-                /> */}
-                <Stack.Screen
+                />
+                <Tab.Screen
                     options={{
                         title: "Novo Jogador",
                         headerStyle: {
@@ -59,7 +45,7 @@ export default function App() {
                     name="NewPlayer"
                     component={NewPlayer}
                 />
-                <Stack.Screen
+                <Tab.Screen
                     options={{
                         title: "Escolha Seu Pokemon",
                         headerStyle: {
@@ -71,8 +57,8 @@ export default function App() {
                     name="ChoisePokemon"
                     component={ChoisePokemon}
                 />
-                <Stack.Screen name="Terms" component={Terms} />
-            </Stack.Navigator>
+                <Tab.Screen name="Terms" component={Terms} />
+            </Tab.Navigator>
         </NavigationContainer>
     );
 }
