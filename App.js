@@ -1,4 +1,4 @@
-// import 'react-native-gesture-handler';
+import "react-native-gesture-handler";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
@@ -15,15 +15,23 @@ const Tab = createBottomTabNavigator();
 export default function App() {
     function HomeNavigator() {
         return (
-            <NavigationContainer>
-                <Tab.Navigator initialRouteName="Home">
-                    <Tab.Screen
-                        // options={{ headerShown: false }}
-                        name="Home"
-                        component={Home}
-                    />
-                </Tab.Navigator>
-            </NavigationContainer>
+            <Tab.Navigator>
+                <Tab.Screen
+                    options={{ headerShown: false }}
+                    name="Home"
+                    component={Home}
+                />
+                <Tab.Screen
+                    options={{ headerShown: false }}
+                    name="Home1"
+                    component={Home}
+                />
+                <Tab.Screen
+                    options={{ headerShown: false }}
+                    name="Home2"
+                    component={Home}
+                />
+            </Tab.Navigator>
         );
     }
 
@@ -33,9 +41,9 @@ export default function App() {
                 <Stack.Screen
                     options={{ headerShown: false }}
                     name="Login"
-                    component={HomeNavigator}
+                    component={Login}
                 />
-                {/* <Stack.Screen
+                <Stack.Screen
                     options={{
                         title: "Home",
                         headerStyle: {
@@ -45,8 +53,8 @@ export default function App() {
                         headerTitleAlign: "center",
                     }}
                     name="Home"
-                    component={Home}
-                /> */}
+                    component={HomeNavigator}
+                />
                 <Stack.Screen
                     options={{
                         title: "Novo Jogador",
